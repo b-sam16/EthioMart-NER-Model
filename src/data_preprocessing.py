@@ -4,7 +4,9 @@ from nltk.tokenize import word_tokenize
 import re
 import os
 
+# Download necessary NLTK data
 nltk.download('punkt')
+nltk.download('punkt_tab')  # Ensure punkt_tab is downloaded
 
 class DataPreprocessor:
     def __init__(self, input_csv, output_csv):
