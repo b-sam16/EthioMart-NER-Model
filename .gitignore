@@ -10,6 +10,8 @@ __pycache__/
 *.xls
 *.xlsx
 *.json
+data/
+data/photos
 # C extensions
 *.so
 
