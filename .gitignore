@@ -2,7 +2,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+*.pyo
 
+# Data files
+*.csv
+*.xls
+*.xlsx
+*.json
 # C extensions
 *.so
 
@@ -135,6 +142,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+
+config.yaml
 
 # Spyder project settings
 .spyderproject
