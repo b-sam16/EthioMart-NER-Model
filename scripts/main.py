@@ -18,13 +18,9 @@ def main():
     input_csv = os.path.join(raw_data_dir, "telegram_data.csv")
     output_csv = os.path.join(processed_data_dir, "preprocessed_telegram_data.csv")
 
-    # Check if the CSV file already exists and has data
-    if os.path.exists(input_csv) and os.path.getsize(input_csv) > 0:
-        print(f"Data already scraped and saved in {input_csv}. Skipping scraping.")
-    else:
-        # Scrape data from Telegram channels
-        scraper = TelegramScraper(input_csv=input_csv)
-        scraper.run()  # Ensures the coroutine is called properly
+    # Step 1: Scrape data from Telegram channels
+    scraper = TelegramScraper(input_csv=input_csv)
+    scraper.run()
 
     # Step 2: Preprocess the scraped data
     preprocessor = DataPreprocessor(input_csv=input_csv, output_csv=output_csv)
